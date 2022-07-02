@@ -1,0 +1,88 @@
+*{
+    /*RESETANDO O CSS*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 80%;
+    height: 500px;
+    border: 1px solid #333;
+    margin: 0 auto; /*CENTRALIZANDO A DIV*/
+    position: relative;
+    overflow: hidden; /*Faz com que o que sair
+    das delimitações da div não apareça mais na tela,
+    fique oculto*/
+}
+
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0; /*estas duas primeiras 
+    linhas fazem com que o Pipe fique 
+    fixo na parte inferior da div criada*/
+    width: 80px;
+    animation: pipe-animation 2s infinite linear; /*Usando a 
+    animação definida infinitamente e com time linear*/
+  
+}
+
+.jump{
+
+    animation: jump 500ms ease-out; /*o ease-out
+    faz com que o pulo caia mais suavemente*/
+
+}
+
+@keyframes pipe-animation {
+    /*Definindo a animação do pipe*/
+    from {
+        /*Início da animação*/
+        right: -80px;
+        
+        /*O valor negativo se dá para que o 
+        Pipe venha POR FORA da tela, e não apareça do nada*/
+    }
+
+    to {
+        /*Final da animação*/
+        right: 100%;
+
+    }
+    
+}
+
+@keyframes jump {
+
+    /*Estabelecendo a animação do pulo, esta que,
+    diferentemente da anterior, possui início (bottom 0),
+    meio (bottom 180px) e fim (bottom 0)*/
+
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 180px;
+    }
+
+    60%{
+        bottom: 180px;
+    }
+
+    0%{
+        bottom: 0;
+    }
+    
+}
