@@ -6,14 +6,15 @@
 }
 
 .game-board {
-    width: 80%;
+    width: 100%;
     height: 500px;
-    border: 1px solid #333;
+    border-bottom: 15px solid green;
     margin: 0 auto; /*CENTRALIZANDO A DIV*/
     position: relative;
     overflow: hidden; /*Faz com que o que sair
     das delimitações da div não apareça mais na tela,
     fique oculto*/
+    background: linear-gradient(#87CEEB, #E0F6FF)
 }
 
 .mario{
@@ -40,6 +41,12 @@
     animation: jump 500ms ease-out; /*o ease-out
     faz com que o pulo caia mais suavemente*/
 
+}
+
+.clouds {
+    width: 550px;
+    position: absolute;
+    animation: clouds-animation 20s infinite linear;
 }
 
 @keyframes pipe-animation {
@@ -84,6 +91,17 @@
 
     0%{
         bottom: 0;
+    }
+    
+}
+
+@keyframes clouds-animation {
+    from{
+        right: -550px;
+    }
+
+    to{
+        right: 100%;
     }
     
 }
