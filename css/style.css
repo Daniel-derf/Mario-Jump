@@ -29,7 +29,8 @@
     linhas fazem com que o Pipe fique 
     fixo na parte inferior da div criada*/
     width: 80px;
-    animation: pipe-animation 2s infinite linear; /*Usando a 
+  
+    animation: pipe-animation 1.5s infinite linear; /*Usando a 
     animação definida infinitamente e com time linear*/
   
 }
